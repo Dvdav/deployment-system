@@ -1,6 +1,7 @@
 spring:
   application:
     name: deployment-system
-  autoconfigure:
-    # DS-001-02 enables the data source when PostgreSQL configuration is added.
-    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  datasource:
+    url: jdbc:postgresql://localhost:${POSTGRES_PORT:5432}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
