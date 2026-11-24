@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: deployment-system
+  autoconfigure:
+    # DS-001-02 enables the data source when PostgreSQL configuration is added.
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
